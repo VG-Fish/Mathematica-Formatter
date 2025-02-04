@@ -1,0 +1,5 @@
+{ulow, uhigh, ujump} = {-15, 30, 5}
+{vlow, vhigh, vjump} = {0, 20, 2};
+uvgrid = Show[Table[Graphics[Line[{{ulow, v}, {uhigh, v}}]], {v, vlow, vhigh, vjump}], Table[Graphics[Line[{{u, vlow}, {u, vhigh}}]], {u, ulow, uhigh}], Axes -> True, AxesLabel -> {"u", "v"}]​
+
+uvpaperplot = Show[Graphics[{Green, Thickness[0.01], Line[{{1, 0}, {5, 0}}]}], Graphics[{Blue, Thickness[0.01], Line[{{5, 0}, {5, Pi}}]}], Graphics[{Orange, Thickness[0.01], Line[{{5, Pi}, {1, Pi}}]}], Graphics[{Red, Thickness[0.01], Line[{{1, Pi}, {1, 0}}]}], Graphics[Text["uv-paper plot", {3, Pi/2}]], AspectRatio -> Automatic, Axes -> True, AxesLabel -> {"u", "v"}, AxesOrigin -> {0, 0}]​
